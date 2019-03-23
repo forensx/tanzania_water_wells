@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% set active_page = "home" %}
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Tanzania: Water Well Analytics</h1>
+    <p class="lead">
+        Welcome to <i><b>Tanzania: Water Well Analytics</b></i>. The goal of this app is to
+        bring awareness of the urgent water crisis in Tanzania, Africa.
+    </p>
+    <hr class="my-4">
+    <p>Scroll down to open an explanation and investigation of the problem at hand.</p>
+    <a class="btn btn-primary btn-lg btn btn-success" href="{{ url_for('analysis') }}" role="button">Enter the App</a>
+</div>
+{% endblock %}
