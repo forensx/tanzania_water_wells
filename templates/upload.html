@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% set active_page = "analysis" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User Data Upload</title>
+  {{ dropzone.load_css() }}
+  {{ dropzone.style('border: 2px dashed #0087F7; margin: 2%; min-height: 100px ;') }}
+</head>
+<body>
+  <div class="container">
+      <div class="row">
+          <div class="col pt-5">
+              <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Tutorial</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Enter Tutorial here</h5>
+                    <p class="card-text">Tutorial stuff</p>
+                  </div>
+                </div>
+          </div>
+          <div class="col">
+              <div class="mx-auto boxtitle">
+                  Input CSV files to analyze in the box below
+          </div>
+            <div class = "col">
+                  {{ dropzone.create(action='upload') }}
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="mx-auto boxtitle" id = "graph1">
+                Graph 1
+            </div>
+            <div class="col">
+                <div class="mx-auto boxtitle" id = "graph2">
+                    Graph 2
+                </div>
+            </div>
+          </div>
+  </div>
+</body> 
+  {{ dropzone.load_js() }}
+  {{ dropzone.config() }}
+</html>
+
+{% endblock %}
