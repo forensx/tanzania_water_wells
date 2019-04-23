@@ -2,12 +2,19 @@
 {% set active_page = "analysis" %}
 {% block content %}
 
+<header class="bg-primary text-center py-2 mb-4 "style="margin-top: 40px;">
+  <div class="container">
+      <h1 class="font-weight-light text-white">Data Upload</h1>
+  </div>
+</header>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>User Data Upload</title>
   {{ dropzone.load_css() }}
   {{ dropzone.style('border: 2px dashed #0087F7; margin: 2%; min-height: 100px ;') }}
+  
 </head>
 <body>
   <div class="container">
@@ -45,5 +52,4 @@
   {{ dropzone.load_js() }}
   {{ dropzone.config() }}
 </html>
-
 {% endblock %}

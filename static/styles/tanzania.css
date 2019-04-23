@@ -1,40 +1,56 @@
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .card {
     margin: 10px 10px;
   }
 
-  /* Flip Cards CSS */
-  .card-container {
-    display: grid;
-    perspective: 700px;
-  }
+/* Flip Cards CSS */
+.card-container {
+  display: grid;
+  perspective: 700px;
+}
 
-  .card-flip {
-    display: grid;
-    grid-template: 1fr / 1fr;
-    grid-template-areas: "frontAndBack";
-    transform-style: preserve-3d;
-    transition: all 0.7s ease;
-  }
+.card-flip {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  grid-template-areas: "frontAndBack";
+  transform-style: preserve-3d;
+  transition: all 0.7s ease;
+}
 
-  .card-flip div {
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-  }
+.card-flip div {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
 
-  .front {
-    grid-area: frontAndBack;
-  }
+.front {
+  grid-area: frontAndBack;
+}
 
-  .back {
-    grid-area: frontAndBack;
-    transform: rotateY(-180deg);
-  }
+.back {
+  grid-area: frontAndBack;
+  transform: rotateY(-180deg);
+}
 
-  .card-container:hover .card-flip {
-    transform: rotateY(180deg);
-  }
+.card-container:hover .card-flip {
+  transform: rotateY(180deg);
+}
 
-  .boxtitle{ 
-    text-align:center;
-    padding-top: 5%;
-  }
+.boxtitle{ 
+  text-align:center;
+  padding-top: 5%;
+}
+
+.copyright {
+  background-attachment: fixed;
+  height: 15px;
+  position: absolute;
+  bottom: 0;
+  text-align: left;
+  color: black;
+}
